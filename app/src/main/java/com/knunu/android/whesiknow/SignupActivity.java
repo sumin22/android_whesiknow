@@ -19,6 +19,7 @@ public class SignupActivity extends AppCompatActivity {
     @BindView(R.id.input_name) EditText nameText;
     @BindView(R.id.input_email) EditText emailText;
     @BindView(R.id.input_password) EditText passwordText;
+    @BindView(R.id.input_confirm_password) EditText confirmPasswordText;
     @BindView(R.id.btn_signup) Button signupButton;
     @BindView(R.id.link_login) TextView loginLink;
 
@@ -63,6 +64,7 @@ public class SignupActivity extends AppCompatActivity {
         String name = nameText.getText().toString();
         String email = emailText.getText().toString();
         String password = passwordText.getText().toString();
+        String confirm_password = confirmPasswordText.getText().toString();
 
         // TODO: Implement your own signup logic here.
 
@@ -97,6 +99,7 @@ public class SignupActivity extends AppCompatActivity {
         String name = nameText.getText().toString();
         String email = emailText.getText().toString();
         String password = passwordText.getText().toString();
+        String confirm_password = confirmPasswordText.getText().toString();
 
         if (name.isEmpty() || name.length() < 3) {
             nameText.setError("최소한 3글자는 되어야 합니다.");
@@ -117,6 +120,13 @@ public class SignupActivity extends AppCompatActivity {
             valid = false;
         } else {
             passwordText.setError(null);
+        }
+
+        if (!password.equals(confirm_password)) {
+            confirmPasswordText.setError("확인용 비밀번호가 일치하지 않습니다.");
+            valid = false;
+        } else {
+            confirmPasswordText.setError(null);
         }
 
         return valid;

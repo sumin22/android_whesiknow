@@ -15,6 +15,7 @@ import butterknife.OnClick;
 public class LoginActivity extends AppCompatActivity {
     private static final String TAG = "LoginActivity";
     private static final int REQUEST_SIGNUP = 0;
+    private static final int REQUEST_LOGIN = 0;
 
     @BindView(R.id.input_email) EditText emailText;
     @BindView(R.id.input_password) EditText passwordText;
@@ -84,7 +85,9 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void onLoginSuccess() {
-        finish();
+        // Start the main activity
+        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        startActivityForResult(intent, REQUEST_LOGIN);
     }
 
     public void onLoginFailed() {
