@@ -1,8 +1,26 @@
-<resources>>
+<resources xmlns:tools="http://schemas.android.com/tools">>
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
         <item name="android:windowDrawsSystemBarBackgrounds">true</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="android:colorEdgeEffect">@color/white</item>
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:editTextColor" tools:targetApi="honeycomb">@color/primary</item>
+
+        <item name="colorAccent">@color/primary</item>
+        <item name="colorControlNormal">@color/iron</item>
+        <item name="colorControlActivated">@color/primary</item>
+        <item name="colorControlHighlight">@color/primary</item>
+        <item name="android:textColorHint">@color/iron</item>
+
+        <item name="colorButtonNormal">@color/primary_darker</item>
+        <item name="android:colorButtonNormal" tools:targetApi="lollipop">@color/primary_darker
+        </item>
     </style>
 </resources>

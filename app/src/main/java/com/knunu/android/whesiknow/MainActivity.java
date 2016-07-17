@@ -11,7 +11,9 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,10 +41,32 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         setupViewPager(viewPager);
         tabLayout.setupWithViewPager(viewPager);
         setupNavigationView(drawerLayout, navigationView);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        String text = null;
+
+        switch(item.getItemId()){
+            case R.id.check_reservation_button:
+                text = "check";
+                break;
+            default:
+                return false;
+        }
+        Toast.makeText(this, text, Toast.LENGTH_SHORT).show();
+        return true;
     }
 
     private void setupNavigationView(final DrawerLayout drawerLayout, NavigationView navigationView) {
