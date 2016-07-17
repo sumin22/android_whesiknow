@@ -8,15 +8,21 @@
     <string name="create_account">계정 생성</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="action_settings">설정</string>
+    <string name="find">찾기</string>
 
 <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="find">검색</string>
-    <string name="package_recommend">패키지 추천</string>
-    <string name="promotion">프로모션</string>
-    <string name="review">리뷰</string>
+    <string name="recommend_theme">추천 테마</string>
+    <string name="event">이벤트</string>
+    <string name="rank">순위</string>
+    <string name="real_time_info">실시간 회식정보</string>
     <string name="confirm_password">비밀번호 확인</string>
     <string name="home">홈</string>
-    <string name="reservation">예약 상황</string>
+    <string name="reservation">예약 관리</string>
     <string name="personal_data">개인정보 관리</string>
+
+    <string name="title_activity_nearby">지금 갈 수 있는 곳</string>
+    <string name="title_activity_detail_info">상세 정보</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
 </resources>

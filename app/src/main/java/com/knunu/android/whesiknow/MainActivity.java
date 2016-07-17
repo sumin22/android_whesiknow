@@ -8,6 +8,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
@@ -25,11 +26,11 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.tabs) TabLayout tabLayout;
     @BindView(R.id.viewpager) ViewPager viewPager;
     @BindView(R.id.drawer_layout) DrawerLayout drawerLayout;
-    @BindView(R.id.naviation_view) NavigationView navigationView;
-    @BindString(R.string.find) String _find;
-    @BindString(R.string.package_recommend) String _package_recommend;
-    @BindString(R.string.promotion) String _promotion;
-    @BindString(R.string.review) String _review;
+    @BindView(R.id.navigation_view) NavigationView navigationView;
+    @BindString(R.string.recommend_theme) String _recommend_theme;
+    @BindString(R.string.event) String _event;
+    @BindString(R.string.rank) String _rank;
+    @BindString(R.string.real_time_info) String _real_time_info;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,11 +42,14 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         setupViewPager(viewPager);
         tabLayout.setupWithViewPager(viewPager);
-
         setupNavigationView(drawerLayout, navigationView);
     }
 
     private void setupNavigationView(final DrawerLayout drawerLayout, NavigationView navigationView) {
+        ActionBarDrawerToggle drawerToggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.app_name, R.string.app_name);
+        drawerLayout.addDrawerListener(drawerToggle);
+        drawerToggle.syncState();
+
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(MenuItem item) {
@@ -57,10 +61,10 @@ public class MainActivity extends AppCompatActivity {
 
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFragment(new FindFragment(), _find);
-        adapter.addFragment(new PackageRecommendFragment(), _package_recommend);
-        adapter.addFragment(new PromotionFragment(), _promotion);
-        adapter.addFragment(new ReviewFragment(), _review);
+        adapter.addFragment(new ThemeFragment(), _recommend_theme);
+        adapter.addFragment(new PackageFragment(), _event);
+        adapter.addFragment(new RankFragment(), _rank);
+        adapter.addFragment(new GetTogetherFragment(), _real_time_info);
         viewPager.setAdapter(adapter);
     }
 
