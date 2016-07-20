@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         setupViewPager(viewPager);
         tabLayout.setupWithViewPager(viewPager);
-        setupNavigationView(drawerLayout, navigationView);
+        setupNavigationView(drawerLayout, navigationView, toolbar);
     }
 
     @Override
@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
-    private void setupNavigationView(final DrawerLayout drawerLayout, NavigationView navigationView) {
+    private void setupNavigationView(final DrawerLayout drawerLayout, NavigationView navigationView, Toolbar toolbar) {
         ActionBarDrawerToggle drawerToggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.app_name, R.string.app_name);
         drawerLayout.addDrawerListener(drawerToggle);
         drawerToggle.syncState();
