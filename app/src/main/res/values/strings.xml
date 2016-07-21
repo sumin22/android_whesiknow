@@ -10,7 +10,7 @@
     <string name="action_settings">설정</string>
     <string name="find">검색</string>
 
-<!-- TODO: Remove or change this placeholder text -->
+    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="recommend_theme">추천 테마</string>
     <string name="event">이벤트</string>
@@ -25,4 +25,7 @@
     <string name="title_activity_detail_info">상세 정보</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="facebook_app_id">1212008215510398</string>
+    <string name="kakao_app_key">ad05d6607e99dd1200cb5361e8e936e4</string>
 </resources>
