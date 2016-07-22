@@ -44,20 +44,122 @@
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+            xmlns:tools="http://schemas.android.com/tools" android:layout_width="wrap_content"
             android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
             android:paddingRight="@dimen/activity_horizontal_margin"
             android:paddingTop="@dimen/activity_vertical_margin"
             android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
             android:focusableInTouchMode="false">
 
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:id="@+id/linearLayout"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="people"
+                    android:id="@+id/textView8"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/abc_primary_text_material_light"
+                    android:layout_gravity="left"
+                    android:layout_margin="5dp"
+                    android:paddingRight="140dp" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:inputType="numberDecimal"
+                    android:ems="10"
+                    android:hint="회식 인원"
+                    android:id="@+id/editText"
+                    android:layout_gravity="bottom" />
+            </LinearLayout>
+
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="date"
+                    android:id="@+id/textView9"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/abc_primary_text_material_light"
+                    android:layout_gravity="left"
+                    android:layout_margin="5dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="select date▽"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/primary"
+                        android:id="@+id/selectdate"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:onClick="calendar"/>
+
+                </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="time"
+                    android:id="@+id/textView10"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/abc_primary_text_material_light"
+                    android:layout_gravity="left"
+                    android:layout_margin="5dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="select time▽"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/primary"
+                    android:id="@+id/textView12"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                   />
+
+                </LinearLayout>
+            </LinearLayout>
+
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/recyclerview"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true" />
+                android:layout_height="345dp"
+                android:layout_below="@+id/linearLayout"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
 
         </RelativeLayout>
 

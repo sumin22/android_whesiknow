@@ -46,7 +46,7 @@ public class LoginActivity extends AppCompatActivity {
     }
     @OnClick(R.id.link_signup) void onSignup() {
         // Start the signup activity
-        Intent intent = new Intent(getApplicationContext(), SignupActivity.class);
+        Intent intent = new Intent(getApplicationContext(), FindActivity.class);
         startActivityForResult(intent, REQUEST_SIGNUP);
     }
 
