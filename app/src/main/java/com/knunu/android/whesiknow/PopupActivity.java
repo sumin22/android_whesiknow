@@ -15,9 +15,10 @@ public class PopupActivity extends AppCompatActivity {
         CalendarView cal = (CalendarView) findViewById(R.id.calendarView);
 
         cal.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
+
             @Override
             public void onSelectedDayChange(CalendarView view, int year, int month, int dayOfMonth) {
-                Toast.makeText(PopupActivity.this, ""+year+"/"+(month+1)+"/"+dayOfMonth, 0).show();
+                Toast.makeText(PopupActivity.this, ""+year+"/"+(month+1)+"/"+dayOfMonth, Toast.LENGTH_SHORT).show();
             }
         });
     }

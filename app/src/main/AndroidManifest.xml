@@ -79,7 +79,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".PopupActivity"></activity>
+        <activity android:name=".PopupActivity" />
+        <activity android:name=".DetailInfo2Activity" />
+        <activity android:name=".DetailInfo3Activity" />
+        <activity android:name=".DetailInfo4Activity" />
+        <activity android:name=".DetailInfo5Activity"></activity>
     </application>
 
 </manifest>

@@ -20,7 +20,18 @@
         android:layout_width="match_parent"
         android:layout_height="0px"
         android:layout_weight="1"
-        android:minDate="01/01/2016"
         android:showWeekNumber="false"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="dieidkfiekf"
+        android:id="@+id/textView11"
+        android:layout_marginLeft="73dp"
+        android:layout_marginStart="73dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="107dp" />
 
 </RelativeLayout>

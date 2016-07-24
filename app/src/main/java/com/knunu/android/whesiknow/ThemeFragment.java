@@ -17,12 +17,13 @@ import butterknife.Unbinder;
  */
 public class ThemeFragment extends Fragment {
 
-    @BindView(R.id.find_button)
+    @BindView(R.id.button)
     Button button;
     private Unbinder unbinder;
 
     public ThemeFragment() {
     }
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
