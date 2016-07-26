@@ -83,7 +83,8 @@
         <activity android:name=".DetailInfo2Activity" />
         <activity android:name=".DetailInfo3Activity" />
         <activity android:name=".DetailInfo4Activity" />
-        <activity android:name=".DetailInfo5Activity"></activity>
+        <activity android:name=".DetailInfo5Activity" />
+        <activity android:name=".SuccessActivity"></activity>
     </application>
 
 </manifest>

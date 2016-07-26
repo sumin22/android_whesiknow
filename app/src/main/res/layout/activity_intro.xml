@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:maxWidth="300dp"
         android:layout_gravity="center"
-        android:src="@drawable/main_logo"
+        android:src="@drawable/long_logo"
         android:adjustViewBounds="true"
         android:contentDescription="@string/title_activity_main" />    <!-- This FrameLayout insets its children based on system windows using
          android:fitsSystemWindows. -->
